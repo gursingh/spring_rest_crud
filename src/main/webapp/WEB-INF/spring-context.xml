@@ -9,8 +9,10 @@
 	http://www.springframework.org/schema/context/spring-context.xsd
     http://www.springframework.org/schema/data/mongo
     http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
-	<context:component-scan base-package="com.gurjinder.home" />
-	<mongo:repositories base-package="com.gurjinder.home" />
+	<context:component-scan base-package="com.gurjinder.home.service" />
+	<context:component-scan base-package="com.gurjinder.home.dao" />
+	<context:component-scan base-package="com.gurjinder.home.controller" />
+	<mongo:repositories base-package="com.gurjinder.home.dao" />
 
 	<bean id="props"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
